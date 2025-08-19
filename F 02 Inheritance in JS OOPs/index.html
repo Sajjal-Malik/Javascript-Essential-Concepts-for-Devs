@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inheritance in JS OOPs</title>
+    </head>
+
+    <body>
+
+        <script>
+            class Employee {
+
+                constructor(empName, empAge, empHeight) {
+                    this.name = empName;
+                    this.age = empAge;
+                    this.height = empHeight;
+                    console.log("This is constructor inside Employee Base class! Hello " + empName + " Bro");
+                }
+
+                info() {
+                    // console.log("I am employee " + this.name);
+                    document.write(`
+                <h1>Employee Details</h1>
+                Name: ${this.name} <br>
+                Name: ${this.age} <br>
+                Name: ${this.height} <br>
+                `)
+                }
+            }
+
+            class Manager extends Employee {
+
+                // constructor(name) {
+                //     super();  // This will show undefined because no argument is being passed
+                //     // super(name);  // This will get the argument instead of undefined
+                //     console.log("This is constructor inside Employee Base class! Hello " + name + " Bro");
+                // }
+
+                info() {
+                    // super().info();
+                    // console.log("I am employee " + this.name);
+                    let salary = 1000000;
+                    document.write(`
+                    <h1>Employee Details</h1>
+                    Name: ${this.name} <br>
+                    Age: ${this.age} <br>
+                    Height: ${this.height} <br>
+                    Salary: ${salary} <br>
+                `)
+                }
+            }
+
+
+
+            // let emp1 = new Employee();
+
+            let mang1 = new Manager("Bhatti", 24, 6.0);
+            mang1.info();
+
+            let mang2 = new Manager("JohnSnow", 30, 6.3);
+            mang2.info();
+        </script>
+    </body>
+
+</html>
