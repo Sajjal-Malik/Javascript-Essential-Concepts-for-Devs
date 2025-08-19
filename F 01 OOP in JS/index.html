@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP in JS</title>
+</head>
+<body>
+
+    <h1>I am learning JS OOPs</h1>
+
+    <script>
+
+        class Hello {
+
+            constructor(fullName){
+                this.name = fullName;
+                console.log("Constructor is called automatically for every new object");
+            }
+
+            message() {
+                console.log("Hello Everyone on the World including " + this.name);
+            }
+
+            static fullNameMethod() {
+                document.write("This will be written inside the DOM");
+            }
+        }
+
+        let obj1 = new Hello('Malik');
+        // obj1.name = "Malik";  // pass the value like this when the constructor is empty
+        obj1.message();
+        // obj1.fullNameMethod();
+
+        Hello.fullNameMethod();
+
+        // let obj2 = new Hello();
+
+    </script>
+    
+</body>
+</html>
