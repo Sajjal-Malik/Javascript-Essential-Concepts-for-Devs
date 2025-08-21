@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Async and Await in JS</title>
+    </head>
+
+    <body>
+
+        <script>
+
+            // let test = async function() {
+            // let test = async () => {
+            async function test() {
+                // return "Hello World!";
+                console.log("1: Message");
+                const  response = await fetch("./content/students.json");
+                console.log("2: Message");
+                const students = await response.json();
+
+                return students;
+            }
+            
+            
+            // let response = test()
+            // console.log(response);
+            // console.log("3: Message");
+
+            test()
+            .then((data) => {
+                console.log(data);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+
+            // .then((result) => {
+            //     console.log(result);
+            // })
+
+        </script>
+
+    </body>
+
+</html>
