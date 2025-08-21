@@ -1,0 +1,12 @@
+{
+    "name":"Malik",
+    "age":24,
+    "married":false,
+    "License":null,
+    "Hobby":["Football","Cricket"],
+    "address":{
+        "pin":2566,
+        "country":"Pakistan",
+        "state":"Punjab"
+    }
+}

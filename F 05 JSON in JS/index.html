@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JSON in JS</title>
+    </head>
+
+    <body>
+
+        <div>
+            <h2 id="demoH2"></h2>
+        </div>
+
+        <script>
+
+            var request = new XMLHttpRequest();
+            request.open("GET", "first.json", false);
+            request.send(null);
+
+            var data = JSON.parse(request.responseText);
+            console.log(data.name);
+            console.log(data.License);
+            console.log(data.Hobby);
+
+            var object = {"name":"Bhatti", age:25, "city":"New York"};
+
+            var myJSON = JSON.stringify(object);
+
+            // console.log(myJSON);
+
+            document.getElementById('demoH2').innerHTML = myJSON;
+        </script>
+
+    </body>
+
+</html>
